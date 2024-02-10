@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import "../index.css";
 // import Logo from "../assets/logo.png";
 
-function NavBar() {
+const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
   // Define navigation items as an array of objects
   const navItems = [
@@ -46,7 +46,7 @@ function NavBar() {
             <button className="px-4 py-2  text-white font-bold rounded-md hover:bg-[#FF6000] focus:outline-none focus:ring focus:ring-blue-300">
               Login
             </button>
-            <button className="px-4 py-2 bg-[#FF6000] text-white rounded-md hover:bg-transparent  focus:outline-none focus:ring focus:ring-green-300">
+            <button className="px-4 py-2 bg-[#45FFCA] text-black font-bold text-lg rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-green-300">
               Register
             </button>
           </div>
@@ -65,6 +65,8 @@ function NavBar() {
       </header>
     </div>
   );
-}
+};
 
 export default NavBar;
+
+// <a href="http://www.freepik.com">Designed by stories / Freepik</a>
