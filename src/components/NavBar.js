@@ -17,7 +17,10 @@ const NavBar = () => {
     <div>
       <header className=" bg-[#637A9F] ">
         <nav className="h-24 flex justify-between items-center px-10 py-10">
-          <a href="/logo" className="text-white text-2xl font-signature">
+          <a
+            href="/logo"
+            className="text-white text-2xl font-signature header-text "
+          >
             Roaming Routes
           </a>
 
@@ -31,7 +34,7 @@ const NavBar = () => {
               <li key={index} className="list-none  ">
                 <a
                   href={item.link}
-                  className="text-white decoration-0 hover:text-[#1F1717]"
+                  className="text-white decoration-0 hover:text-[#1F1717] text-xl header-text"
                 >
                   {item.text}
                 </a>
@@ -41,9 +44,9 @@ const NavBar = () => {
           <div
             className={`lg:flex gap-4 min-[320px]:hidden ${
               isActive ? "flex" : "hidden"
-            }`}
+            } text-xl`}
           >
-            <button className="px-4 py-2  text-white font-bold rounded-md hover:bg-[#FF6000] focus:outline-none focus:ring focus:ring-blue-300">
+            <button className="px-4 py-2  text-white font-bold rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-blue-300">
               Login
             </button>
             <button className="px-4 py-2 bg-[#45FFCA] text-black font-bold text-lg rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-green-300">
