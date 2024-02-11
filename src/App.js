@@ -5,6 +5,8 @@ import Search from "./components/Search";
 import Destination from "./components/DestinationList";
 import PopularTours from "./components/PopularTours";
 import AboutUs from "./components/AboutUs.js";
+import Newsletter from "./components/Newsletter.js";
+import UserReviews from "./components/UserReview.js";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Destination />
       <PopularTours />
       <AboutUs />
+      <Newsletter />
+      <UserReviews />
     </div>
   );
 }
