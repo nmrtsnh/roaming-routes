@@ -54,3 +54,45 @@ code {
 .header-text {
   font-family: "Playfair Display", sans-serif;
 }
+
+.place-card {
+  position: relative;
+}
+
+.place-info {
+  position: absolute;
+  bottom: 20%;
+  left: 15%;
+  /* right: 120px; */
+  /* margin: 0 auto; */
+
+  display: none;
+}
+
+.place-btn {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  display: none;
+}
+
+.place-card:hover .place-info {
+  display: block; /* Show on hover */
+  opacity: 1;
+}
+
+.place-card:hover .place-btn {
+  display: block;
+  opacity: 1;
+}
+
+.place-info,
+.place-btn {
+  /* transition: width 2s, height 4s; */
+}
+
+.place-info,
+.place-btn {
+  /* position: absolute; */
+  opacity: 0; /* Set default opacity to 0 */
+}
