@@ -17,7 +17,7 @@ function PlacesGallery() {
   ];
 
   return (
-    <div className="">
+    <div className="mb-20">
       <h2 className="text-4xl  mb-4 font-cursive font-cursive text-[#F94C10] font-bold text-center mt-10">
         Our Special Destination
       </h2>

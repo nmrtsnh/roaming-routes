@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import "../index.css";
 // import Logo from "../assets/logo.png";
 
-const NavBar = () => {
+const NavBar = ({ onRegisterClick }) => {
   const [isActive, setIsActive] = useState(false);
   // Define navigation items as an array of objects
   const navItems = [
@@ -49,7 +49,10 @@ const NavBar = () => {
             <button className="px-4 py-2  text-white font-bold rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-blue-300">
               Login
             </button>
-            <button className="px-4 py-2 bg-[#45FFCA] text-black font-bold text-lg rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-green-300">
+            <button
+              className="px-4 py-2 bg-[#45FFCA] text-black font-bold text-lg rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-green-300"
+              onClick={onRegisterClick}
+            >
               Register
             </button>
           </div>
