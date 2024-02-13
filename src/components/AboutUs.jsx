@@ -51,6 +51,11 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
+          <div className="flex items-center justify-center">
+            <button className="text-lg bg-[#45FFCA] hover:bg-[#FF004D] text-black hover:text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline">
+              Know More About Us
+            </button>
+          </div>
         </div>
         <div className="md:w-1/2">
           {" "}

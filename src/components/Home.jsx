@@ -1,4 +1,13 @@
 import Hero from "../assets/hero.jpg";
+import AboutUs from "./AboutUs";
+import DestinationList from "./DestinationList";
+import Footer from "./Footer";
+import Newsletter from "./Newsletter";
+import PlacesGallery from "./PlacesGallery";
+import PopularTours from "./PopularTours";
+import RegisterForm from "./Register";
+import Search from "./Search";
+import UserReviews from "./UserReviews";
 
 const Home = () => {
   return (
@@ -35,6 +44,15 @@ const Home = () => {
           </a>
         </div>
       </div>
+
+      <Search />
+      <DestinationList />
+      <PopularTours />
+      <AboutUs />
+      <Newsletter />
+      <UserReviews />
+      <PlacesGallery />
+      <Footer />
     </div>
   );
 };

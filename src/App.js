@@ -1,32 +1,27 @@
 import React, { useState } from "react";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
-import Search from "./components/Search";
-import Destination from "./components/DestinationList";
-import PopularTours from "./components/PopularTours";
-import AboutUs from "./components/AboutUs.js";
-import Newsletter from "./components/Newsletter.js";
-import UserReview from "./components/UserReviews.js";
-import Footer from "./components/Footer.js";
-import PlacesGallery from "./components/PlacesGallery.js";
-import RegisterForm from "./components/Register.js";
+import AboutUs from "./components/AboutUs";
+import Destinations from "./components/DestinationList";
+import Package from "./components/PlacesGallery";
 
 function App() {
-  const [showRegisterorm, setShowRegisterForm] = useState(false);
   return (
-    <div>
-      <NavBar onRegisterClick={() => setShowRegisterForm(!showRegisterorm)} />
-      <Home />
-      <Search />
-      <Destination />
-      <PopularTours />
-      <AboutUs />
-      <Newsletter />
-      <UserReview />
-      <PlacesGallery />
-      <Footer />
-      {showRegisterorm && <RegisterForm />}
-    </div>
+    <Router>
+      <div>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/DestinationList" element={<Destinations />} />
+          <Route path="/PlacesGallery" element={<Package />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
