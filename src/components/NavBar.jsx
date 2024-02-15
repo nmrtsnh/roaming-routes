@@ -33,7 +33,7 @@ const NavBar = () => {
     {
       id: 5,
       link: "Contact Us",
-      path: "/ContactUs",
+      path: "/Contact",
     },
   ];
 

@@ -9,6 +9,8 @@ import RegisterForm from "./Register";
 import Search from "./Search";
 import UserReviews from "./UserReviews";
 
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div>
@@ -28,9 +30,11 @@ const Home = () => {
             destinations offers something for every traveler. Start planning
             your dream getaway today and let the adventure unfold!
           </p>
-          <button className="text-lg bg-[#45FFCA] hover:bg-[#FF004D] text-black hover:text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline">
-            Start Exploring
-          </button>
+          <Link to="/destination-card">
+            <button className="text-lg bg-[#45FFCA] hover:bg-[#FF004D] text-black hover:text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline">
+              Start Exploring
+            </button>
+          </Link>
         </div>
         <div className="md:w-1/2">
           {" "}
@@ -52,6 +56,7 @@ const Home = () => {
       <Newsletter />
       <UserReviews />
       <PlacesGallery />
+
       <Footer />
     </div>
   );

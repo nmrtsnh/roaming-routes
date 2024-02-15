@@ -1,0 +1,114 @@
+[
+  {
+    "id": "p1",
+    "city": "Paris",
+
+    "price": "$150",
+    "category": "Europe"
+  },
+  {
+    "id": "p2",
+    "city": "Tokyo",
+
+    "price": "$180",
+    "category": "Asia"
+  },
+  {
+    "id": "p3",
+    "city": "New York City",
+
+    "price": "$200",
+    "category": "North America"
+  },
+  {
+    "id": "p4",
+    "city": "London",
+
+    "price": "$220",
+    "category": "Europe"
+  },
+  {
+    "id": "p5",
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "price": "$190",
+    "category": "Middle East"
+  },
+  {
+    "id": "p6",
+    "city": "Singapore",
+
+    "price": "$210",
+    "category": "Asia"
+  },
+  {
+    "id": "p7",
+    "city": "Istanbul",
+
+    "price": "$1000",
+    "category": "Europe"
+  },
+  {
+    "id": "p8",
+    "city": "Seoul",
+
+    "price": "$1700",
+    "category": "Asia"
+  },
+  {
+    "id": "p9",
+    "city": "Bangkok",
+
+    "price": "$1800",
+    "category": "Asia"
+  },
+  {
+    "id": "p10",
+    "city": "Barcelona",
+
+    "price": "$1700",
+    "category": "Europe"
+  },
+  {
+    "id": "p11",
+    "city": "Sydney",
+
+    "price": "$1600",
+    "category": "Australia"
+  },
+  {
+    "id": "p12",
+    "city": "Rome",
+
+    "price": "$1900",
+    "category": "Europe"
+  },
+  {
+    "id": "p13",
+    "city": "Los Angeles",
+
+    "price": "$2000",
+    "category": "North America"
+  },
+  {
+    "id": "p14",
+    "city": "Berlin",
+
+    "price": "$100",
+    "category": "Europe"
+  },
+  {
+    "id": "p15",
+    "city": "Amsterdam",
+
+    "price": "$200",
+    "category": "Europe"
+  },
+  {
+    "id": "p16",
+    "city": "Seychelles",
+
+    "price": "$200",
+    "category": "Africa"
+  }
+]
