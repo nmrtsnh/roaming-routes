@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import DestinationData from "../assets/data/destinations.json";
+
 import ParisImage from "../assets/ParisInNight.jpg";
 import TokyoImage from "../assets/Tokyo.jpg";
 import NewYorkCityImage from "../assets/NewYorkCity.jpg";

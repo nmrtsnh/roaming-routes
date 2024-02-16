@@ -59,7 +59,6 @@ const Home = () => {
       <Newsletter />
       <UserReviews />
       <PlacesGallery />
-      <AboutUs />
 
       <Footer />
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Santorini from "../assets/Santorini.jpg";
 import Paris from "../assets/Paris.jpg";
 import Maui from "../assets/Maui.jpg";
@@ -101,9 +101,24 @@ function getRandomRating() {
   return +(Math.random() * (5 - 3) + 3).toFixed(1);
 }
 
-const DestinationCard = ({ destination }) => {
+const DestinationCard = ({ destination, index }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, (index + 1) * 800); // Adjust the delay time as needed (here it's 500 milliseconds)
+
+    return () => clearTimeout(timer);
+  }, [index]);
+
   return (
-    <div className=" w-fit rounded overflow-hidden shadow-lg mb-8 animation ">
+    <div
+      id={`destination-${destination.id}`}
+      className={`w-fit rounded overflow-hidden shadow-lg mb-8 animation ${
+        isVisible ? "animate-slide-in" : ""
+      }`}
+    >
       <img
         className=" w-96 h-96 object-cover cursor-pointer "
         src={destination.src}
@@ -138,9 +153,13 @@ const DestinationList = () => {
           Choose your dream destination
         </h1>
       </div>
-      <div className=" grid grid-cols-3 gap-10">
-        {destinations.map((destination) => (
-          <DestinationCard key={destination.name} destination={destination} />
+      <div className="grid grid-cols-3 gap-10">
+        {destinations.map((destination, index) => (
+          <DestinationCard
+            key={destination.name}
+            destination={destination}
+            index={index}
+          />
         ))}
       </div>
       <button className="text-lg bg-[#45FFCA] hover:bg-[#FF004D] text-black hover:text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline ">
