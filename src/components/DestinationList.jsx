@@ -70,7 +70,7 @@ const destinations = [
   {
     id: 8,
     name: "Queenstown",
-    location: "BNew Zealand",
+    location: "New Zealand",
     price: getRandomPrice(),
     rating: getRandomRating(),
     src: QueensTown,
@@ -103,21 +103,21 @@ function getRandomRating() {
 
 const DestinationCard = ({ destination }) => {
   return (
-    <div className="w-fit rounded overflow-hidden shadow-lg mb-8">
+    <div className=" w-fit rounded overflow-hidden shadow-lg mb-8 animation ">
       <img
-        className="w-72 h-72 object-cover"
+        className=" w-96 h-96 object-cover cursor-pointer "
         src={destination.src}
         alt={destination.name}
       />
       <div className="flex justify-between">
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">
+          <p className="font-bold text-xl mb-2 cursor-pointer ">
             {destination.name}, {destination.location}
-          </div>
+          </p>
 
           <p className="text-gray-900 text-xl font-bold">{destination.price}</p>
         </div>
-        <div className="px-6 pt-4 pb-2">
+        <div className="px-6 pt-8 pb-2">
           <span className="inline-block bg-yellow-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-900 mr-2 mb-2">
             ⭐ {destination.rating}
           </span>
@@ -129,7 +129,7 @@ const DestinationCard = ({ destination }) => {
 
 const DestinationList = () => {
   return (
-    <div className=" flex  flex-col items-center mb-20">
+    <div className=" flex  flex-col items-center  mb-20">
       <div className="text-center mb-10">
         <h2 className="text-4xl  mb-4 font-cursive font-cursive text-[#F94C10] font-bold">
           Unforgettable Expeditions
@@ -138,13 +138,13 @@ const DestinationList = () => {
           Choose your dream destination
         </h1>
       </div>
-      <div className=" grid grid-cols-3 px-48">
+      <div className=" grid grid-cols-3 gap-10">
         {destinations.map((destination) => (
           <DestinationCard key={destination.name} destination={destination} />
         ))}
       </div>
       <button className="text-lg bg-[#45FFCA] hover:bg-[#FF004D] text-black hover:text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline ">
-        Start More
+        Show More
       </button>
     </div>
   );

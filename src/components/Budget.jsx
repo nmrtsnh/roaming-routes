@@ -9,7 +9,7 @@ const Budget = ({ handleBudgetChange }) => {
     handleBudgetChange(newBudget);
   };
   return (
-    <div class="budget">
+    <div>
       <div className="text-white text-md font-extrabold font-text font mb-8 mt-20 flex justify-between">
         Budget: <span className="float">${budget}</span>
       </div>

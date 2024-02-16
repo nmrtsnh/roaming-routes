@@ -8,6 +8,7 @@ import AboutUs from "./components/AboutUs";
 import Destinations from "./components/DestinationList";
 import Package from "./components/PlacesGallery";
 import DestinationCard from "./components/DestinationCard";
+import AvailableDestinations from "./components/AvailableDestinations";
 
 function App() {
   return (
@@ -16,11 +17,15 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Home" element={<Home />} />
+          <Route path="/Home" element={<Home />}></Route>
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/DestinationList" element={<Destinations />} />
           <Route path="/PlacesGallery" element={<Package />} />
           <Route path="/destination-card" element={<DestinationCard />} />
+          <Route
+            path="/AvailableDestinations"
+            element={<AvailableDestinations />}
+          />
         </Routes>
       </div>
     </Router>

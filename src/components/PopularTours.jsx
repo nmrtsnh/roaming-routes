@@ -80,35 +80,20 @@ const Tours = [
 
 function PopularTours() {
   return (
-    <div className="container mx-auto px-4 py-8 ">
+    <div className=" mx-auto px-4 py-8 ">
       <h2 className="text-4xl  mb-4 font-cursive font-cursive text-[#F94C10] font-bold text-center">
         Discover our popular Tours
       </h2>
       <h1 className="text-4xl font-bold mb-6 text-center">
         Most Popular Tours
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-6 ">
+      <div className="container grid grid-cols-2 gap-10 cursor-pointer ">
         {Tours.map((tour) => (
-          <div
-            key={tour.id}
-            className="border rounded-lg overflow-hidden bg-[#FFF8E3]"
-          >
-            <img
-              src={tour.src}
-              alt={tour.name}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">{tour.name}</h3>
+          <div key={tour.id} className="box border rounded-lg  bg-[#FFF8E3] ">
+            <img src={tour.src} alt={tour.name} className="box-img" />
+            <div className="p-2 box-span">
+              <h3 className="text-xl font-semibold pb-4">{tour.name}</h3>
               <p className="text-gray-600 mb-2">{tour.location}</p>
-              <div className="flex justify-between">
-                <p className="text-gray-800 font-semibold mb-2">{tour.price}</p>
-                <p className="text-gray-700 mb-2">Duration: {tour.duration}</p>
-                <div className="flex items-center">
-                  <span className="text-yellow-500 mr-1">&#9733;</span>
-                  <span>{tour.rating}</span>
-                </div>
-              </div>
             </div>
           </div>
         ))}

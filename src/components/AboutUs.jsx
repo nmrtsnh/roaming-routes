@@ -1,5 +1,5 @@
 import AboutUsImg from "../assets/AboutUs.jpg";
-import { FaLocationDot } from "react-icons/fa6";
+
 import { FaCrown } from "react-icons/fa6";
 import { GiWorld } from "react-icons/gi";
 import { FaHandHoldingDollar } from "react-icons/fa6";

@@ -1,11 +1,13 @@
+// import { Data } from "@react-google-maps/api";
 import Hero from "../assets/hero.jpg";
 import AboutUs from "./AboutUs";
+
 import DestinationList from "./DestinationList";
 import Footer from "./Footer";
 import Newsletter from "./Newsletter";
 import PlacesGallery from "./PlacesGallery";
 import PopularTours from "./PopularTours";
-import RegisterForm from "./Register";
+
 import Search from "./Search";
 import UserReviews from "./UserReviews";
 
@@ -31,7 +33,7 @@ const Home = () => {
             your dream getaway today and let the adventure unfold!
           </p>
           <Link to="/destination-card">
-            <button className="text-lg bg-[#45FFCA] hover:bg-[#FF004D] text-black hover:text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline">
+            <button className="text-lg bg-[#45FFCA]  hover:bg-[#F94C10]  hover:text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline">
               Start Exploring
             </button>
           </Link>
@@ -52,10 +54,12 @@ const Home = () => {
       <Search />
       <DestinationList />
       <PopularTours />
+
       <AboutUs />
       <Newsletter />
       <UserReviews />
       <PlacesGallery />
+      <AboutUs />
 
       <Footer />
     </div>

@@ -43,7 +43,8 @@ const NavBar = () => {
     setShowRegisterForm(false);
   };
 
-  const handleRegisterClick = () => {
+  const handleRegisterClick = (event) => {
+    event.stopPropagation(); // Prevent event propagation to parent elements
     setShowRegisterForm(true); // Show the RegisterForm when the Register button is clicked
   };
 
