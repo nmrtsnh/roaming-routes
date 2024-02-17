@@ -349,3 +349,26 @@ code {
 .container-1.box:hover .content p {
   transform: translateY(0px);
 }
+
+/* .available-destination-animation:nth-child(1) {
+  transform: rotate(-10deg);
+}
+.available-destination-animation:nth-child(2) {
+  transform: rotate(20deg);
+}
+.available-destination-animation:nth-child(3) {
+  transform: rotate(-10deg);
+}
+.available-destination-animation:nth-child(4) {
+  transform: rotate(-10deg);
+}
+.available-destination-animation:nth-child(5) {
+  transform: rotate(20deg);
+}
+.available-destination-animation:nth-child(6) {
+  transform: rotate(-10deg);
+} */
+
+.available-destination-animation:hover {
+  transform: scale(1.4);
+}

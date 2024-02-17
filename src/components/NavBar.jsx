@@ -41,7 +41,7 @@ const NavBar = () => {
       <header className="bg-[#637A9F]">
         <nav className="h-24 flex justify-between items-center px-10 py-10">
           <a
-            href="/logo"
+            href="/Home"
             className="text-white text-2xl font-signature header-text"
           >
             Roaming Routes
