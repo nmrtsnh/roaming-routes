@@ -36,10 +36,6 @@ const NavBar = () => {
     setIsActive(false); // Close the mobile menu when a link is clicked
   };
 
-  const handleRegisterClick = (event) => {
-    event.stopPropagation(); // Prevent event propagation to parent elements
-  };
-
   return (
     <div>
       <header className="bg-[#637A9F]">
@@ -80,14 +76,13 @@ const NavBar = () => {
               isActive ? "flex" : "hidden"
             } text-xl`}
           >
-            <button className="px-4 py-2 text-white font-bold rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-blue-300">
-              Login
-            </button>
+            <Link to="/LoginForm">
+              <button className="px-4 py-2 text-white font-bold rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-blue-300">
+                Login
+              </button>
+            </Link>
             <Link to="/RegisterForm">
-              <button
-                className="px-4 py-2 bg-[#45FFCA] text-black font-bold text-lg rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-green-300"
-                onClick={handleRegisterClick}
-              >
+              <button className="px-4 py-2 bg-[#45FFCA] text-black font-bold text-lg rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-green-300">
                 Register
               </button>
             </Link>

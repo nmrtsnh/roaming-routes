@@ -10,6 +10,7 @@ import Package from "./components/PlacesGallery";
 import DestinationCard from "./components/DestinationCard";
 import AvailableDestinations from "./components/AvailableDestinations";
 import RegisterForm from "./components/Register";
+import LoginForm from "./components/Login";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             element={<AvailableDestinations />}
           />
           <Route path="/RegisterForm" element={<RegisterForm />} />
+          <Route path="/LoginForm" element={<LoginForm />} />
         </Routes>
       </div>
     </Router>
