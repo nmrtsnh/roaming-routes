@@ -4,6 +4,11 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 
+import FooterImg1 from "../assets/FooterImg1.jpg";
+import FooterImg2 from "../assets/FooterImg2.jpg";
+import FooterImg3 from "../assets/FooterImg3.jpg";
+import FooterImg4 from "../assets/FooterImg4.jpg";
+
 const about = {
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -44,9 +49,10 @@ const services = [
 ];
 
 const photos = [
-  { src: "path-to-photo-1", alt: "Description" },
-  { src: "path-to-photo-2", alt: "Description" },
-  // ... add other photos
+  { src: FooterImg1, alt: "Description" },
+  { src: FooterImg2, alt: "Description" },
+  { src: FooterImg3, alt: "Description" },
+  { src: FooterImg4, alt: "Description" },
 ];
 
 const FooterSection = ({ title, children }) => (
@@ -108,13 +114,13 @@ const Footer = () => {
 
         {/* Photo Showcase Section */}
         <FooterSection title="Photo Showcase">
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-4 gap-2">
             {photos.map((photo) => (
               <img
                 key={photo.src}
                 src={photo.src}
                 alt={photo.alt}
-                className="w-full h-auto"
+                className="w-18 h-24"
               />
             ))}
           </div>
