@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import RegisterForm from "./Register";
 
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
   const [activeLink, setActiveLink] = useState("");
-  const [showRegisterForm, setShowRegisterForm] = useState(false); // State to control the visibility of the RegisterForm
-
-  const location = useLocation();
 
   const navItems = [
     {
@@ -30,22 +29,15 @@ const NavBar = () => {
       link: "Packages",
       path: "/PlacesGallery",
     },
-    {
-      id: 5,
-      link: "Contact Us",
-      path: "/Contact",
-    },
   ];
 
   const handleLinkClick = (path) => {
     setActiveLink(path);
     setIsActive(false); // Close the mobile menu when a link is clicked
-    setShowRegisterForm(false);
   };
 
   const handleRegisterClick = (event) => {
     event.stopPropagation(); // Prevent event propagation to parent elements
-    setShowRegisterForm(true); // Show the RegisterForm when the Register button is clicked
   };
 
   return (
@@ -91,12 +83,14 @@ const NavBar = () => {
             <button className="px-4 py-2 text-white font-bold rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-blue-300">
               Login
             </button>
-            <button
-              className="px-4 py-2 bg-[#45FFCA] text-black font-bold text-lg rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-green-300"
-              onClick={handleRegisterClick}
-            >
-              Register
-            </button>
+            <Link to="/RegisterForm">
+              <button
+                className="px-4 py-2 bg-[#45FFCA] text-black font-bold text-lg rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-green-300"
+                onClick={handleRegisterClick}
+              >
+                Register
+              </button>
+            </Link>
           </div>
 
           <div
@@ -111,7 +105,6 @@ const NavBar = () => {
           </div>
         </nav>
       </header>
-      {showRegisterForm && <RegisterForm />}
     </div>
   );
 };
