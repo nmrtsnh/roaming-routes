@@ -3,6 +3,7 @@ import AboutUsImg from "../assets/AboutUs.jpg";
 import { FaCrown } from "react-icons/fa6";
 import { GiWorld } from "react-icons/gi";
 import { FaHandHoldingDollar } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -52,9 +53,11 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <button className="text-lg bg-[#45FFCA] hover:bg-[#FF004D] text-black hover:text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline">
-              Know More About Us
-            </button>
+            <Link to="/About">
+              <button className="text-lg bg-[#45FFCA] hover:bg-[#FF004D] text-black hover:text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline">
+                Know More About Us
+              </button>
+            </Link>
           </div>
         </div>
         <div className="md:w-1/2">

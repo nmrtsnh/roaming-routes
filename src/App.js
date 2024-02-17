@@ -11,6 +11,7 @@ import DestinationCard from "./components/DestinationCard";
 import AvailableDestinations from "./components/AvailableDestinations";
 import RegisterForm from "./components/Register";
 import LoginForm from "./components/Login";
+import AboutRoamingRoutes from "./components/About";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />}></Route>
           <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/About" element={<AboutRoamingRoutes />} />
+
           <Route path="/DestinationList" element={<Destinations />} />
           <Route path="/PlacesGallery" element={<Package />} />
           <Route path="/destination-card" element={<DestinationCard />} />
