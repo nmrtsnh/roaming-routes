@@ -38,7 +38,7 @@ function LoginForm() {
         </div>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="username" className="block text-gray-700">
+            <label htmlFor="username" className="block text-black">
               Username
             </label>
             <input

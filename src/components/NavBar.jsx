@@ -48,7 +48,7 @@ const NavBar = () => {
           </a>
 
           <ul
-            className={`lg:flex lg:justify-between items-center lg:gap-10 ${
+            className={`lg:flex lg:justify-between text-xl items-center lg:gap-10 ${
               isActive ? "flex" : "hidden"
             } nav-menu`}
           >
