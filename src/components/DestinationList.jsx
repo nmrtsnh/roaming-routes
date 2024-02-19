@@ -154,7 +154,7 @@ const DestinationList = () => {
           Choose your dream destination
         </h1>
       </div>
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-10">
         {destinations.map((destination, index) => (
           <DestinationCard
             key={destination.name}

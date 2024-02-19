@@ -4,19 +4,39 @@ import { FaCrown } from "react-icons/fa6";
 import { GiWorld } from "react-icons/gi";
 import { FaHandHoldingDollar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const AboutUs = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 1200);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div>
-      <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-screen-xl px-4 py-8 ">
-        <div className="md:w-1/2">
+      <div className="flex flex-col md:flex-row items-center justify-center xl:justify-between mx-auto max-w-screen-xl px-4 py-8  ">
+        <div className="xl:w-1/2 ">
           <h2 className="text-4xl  mb-6 font-cursive font-cursive text-[#F94C10] font-bold text-center ">
             Why Choose Us?
           </h2>
           <h1 className="text-4xl font-bold mb-24 text-center ">
             Discover unparalleled experiences.
           </h1>
-          <div className="flex justify-between">
+          <div className="flex sm:flex-row flex-col justify-between">
             <div className="flex flex-col items-center ">
               <FaCrown className="text-red-500 mb-4" size={40} />
               <h2 className="text-lg mb-4 font-extrabold">
@@ -60,17 +80,19 @@ const AboutUs = () => {
             </Link>
           </div>
         </div>
-        <div className="md:w-1/2">
-          {" "}
-          <a href="http://www.freepik.com" className="font-xs ">
-            <img
-              src={AboutUsImg}
-              alt="Couples Roaming around"
-              className="w-full md:h-auto md:max-h-full object-cover"
-            />
-            Designed by stories / Freepik
-          </a>
-        </div>
+        {!isSmallScreen && (
+          <div className="md:w-1/2">
+            {" "}
+            <a href="http://www.freepik.com" className="font-xs ">
+              <img
+                src={AboutUsImg}
+                alt="Couples Roaming around"
+                className="w-full md:h-auto md:max-h-fit object-cover"
+              />
+              Designed by stories / Freepik
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -16,14 +16,14 @@ function PlacesGallery() {
   ];
 
   return (
-    <div className="mb-20 container-1 box-1 content">
+    <div className="mb-20 container-1 box-1 content xl:pt-32">
       <h2 className="text-4xl  mb-4 font-cursive font-cursive text-[#F94C10] font-bold text-center mt-10">
         Our Special Destination
       </h2>
       <h1 className="text-4xl font-bold  text-center">
         "Discover the world's treasures with us!"
       </h1>
-      <div className="grid grid-cols-3 gap-10 mt-10 mx-20 ">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 mt-10 mx-20 ">
         {places.map((place, index) => (
           <div key={index} className="place-card box-1">
             <img

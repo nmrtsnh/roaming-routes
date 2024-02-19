@@ -85,13 +85,13 @@ function PopularTours() {
       <h1 className="text-4xl font-bold mb-6 text-center">
         Most Popular Tours
       </h1>
-      <div className="container grid grid-cols-2 gap-10 cursor-pointer ">
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-10 cursor-pointer ">
         {Tours.map((tour) => (
           <div key={tour.id} className="box border rounded-lg  bg-[#FFF8E3] ">
             <img src={tour.src} alt={tour.name} className="box-img" />
             <div className="p-2 box-span">
               <h3 className="text-xl font-semibold pb-4">{tour.name}</h3>
-              <p className="text-gray-600 mb-2">{tour.location}</p>
+              <p className="text-gray-600 xl:mb-2 ">{tour.location}</p>
             </div>
           </div>
         ))}

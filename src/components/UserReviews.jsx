@@ -1,4 +1,3 @@
-import UserReviewImg from "../assets/UserReviews.jpg";
 import Avatar1 from "../assets/Avatar1.jpg";
 import Avatar2 from "../assets/Avatar2.jpg";
 import Avatar3 from "../assets/Avatar3.jpg";
@@ -91,20 +90,15 @@ const UserReviews = () => {
   };
 
   return (
-    <div className="relative">
-      <img
-        src={UserReviewImg}
-        alt="User Review Background"
-        className="opacity-50 object-contain"
-      />
-      <div className="w-fit mx-auto bg-[#637A9F]  p-10 rounded-lg shadow-md absolute top-36 left-10 right-10  ">
+    <div>
+      <div className="w-fit mx-auto bg-[#637A9F]  p-10 rounded-lg shadow-md  ">
         <h1 className="text-4xl  mb-4 font-cursive font-cursive text-[#F94C10] font-bold text-center">
           User Reviews
         </h1>
         <p className="text-md text-white leading-relaxed pb-10 font-text text-center">
           Discover what our customers are saying about their experiences!
         </p>
-        <div className="grid grid-cols-3 h-full gap-10 ">
+        <div className="grid lg:grid-cols-3   h-full gap-10 z-50 ">
           {customerReviews
             .slice(startIndex, startIndex + reviewsPerPage)
             .map((review) => (

@@ -87,7 +87,7 @@ const FooterSection = ({ title, children }) => (
 const Footer = () => {
   return (
     <footer className="bg-[#637A9F] text-gray-400 py-8 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-8">
         <FooterSection title="About us">
           <p>{about.description}</p>
           <div className="flex space-x-4 mt-4">
@@ -132,13 +132,13 @@ const Footer = () => {
         </FooterSection>
 
         <FooterSection title="Photo Showcase">
-          <div className="grid grid-cols-4 gap-2">
+          <div className="sm:grid sm:grid-cols-4 sm:gap-2 flex gap-2     ">
             {photos.map((photo) => (
               <img
                 key={photo.src}
                 src={photo.src}
                 alt={photo.alt}
-                className="w-18 h-24"
+                className="w-18 h-24 "
               />
             ))}
           </div>

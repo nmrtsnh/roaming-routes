@@ -24,8 +24,11 @@ function LoginForm() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 relative">
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${LoginImage})`, opacity: 0.4 }}
+        className="fixed inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${LoginImage})`,
+          opacity: 0.4,
+        }}
       ></div>
       <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-lg z-50 ">
         <div>
