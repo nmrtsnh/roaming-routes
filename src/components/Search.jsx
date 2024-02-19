@@ -21,7 +21,7 @@ const Search = () => {
   };
 
   return (
-    <div className="bg-[#FFF8E3] p-4 flex justify-center gap-10 items-end mb-20 mx-32 rounded-lg">
+    <div className="bg-[#FFF8E3] md:p-10 p-10   flex flex-col md:flex-row md:justify-center  gap-10 md:items-end mb-20 md:mx-32 mx-10 rounded-lg ">
       <div className="flex flex-col mr-4">
         <label htmlFor="destination" className="font-semibold mb-2 text-3xl">
           Search your next holiday

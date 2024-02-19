@@ -1,5 +1,7 @@
 // import { Data } from "@react-google-maps/api";
-import Hero from "../assets/hero.jpg";
+import { useEffect, useState } from "react";
+import HeroLg from "../assets/hero.jpg";
+import HeroSm from "../assets/HeroSm.jpg";
 import AboutUs from "./AboutUs";
 
 import DestinationList from "./DestinationList";
@@ -14,9 +16,24 @@ import UserReviews from "./UserReviews";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div>
-      <div className="flex flex-col md:flex-row items-center justify-center md:justify-between mx-auto max-w-screen-xl px-4 py-8 ">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center md:justify-between mx-auto max-w-screen-xl px-4 lg:py-8 pb-20  ">
         <div className="md:w-1/2">
           <h2 className="text-4xl  mb-4 font-cursive font-cursive text-[#F94C10] font-bold">
             Embark on Unforgettable Journeys
@@ -42,7 +59,7 @@ const Home = () => {
           {" "}
           <a href="http://www.freepik.com" className="font-xs ">
             <img
-              src={Hero}
+              src={isSmallScreen ? HeroSm : HeroLg}
               alt="Couples Roaming around"
               className="w-full md:h-auto md:max-h-full object-cover"
             />

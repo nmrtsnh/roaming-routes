@@ -52,19 +52,18 @@ const NavBar = () => {
           </a>
 
           <ul
-            className={`lg:flex lg:justify-between text-xl items-center lg:gap-10 ${
+            className={`lg:flex lg:justify-between text-xl items-center lg:gap-10  ${
               isActive ? "flex" : "hidden"
             } nav-menu`}
           >
             {navItems.map((item) => (
               <li
                 key={item.id}
-                className="nav-menu"
+                className=""
                 onClick={() => handleLinkClick(item.path)}
               >
                 <NavLink
                   to={item.path}
-                  activeClassName="font-bold"
                   className={`text-white hover:text-gray-300 transition duration-300 ease-in-out ${
                     activeLink === item.path ? "font-bold" : ""
                   }`}
@@ -73,6 +72,18 @@ const NavBar = () => {
                 </NavLink>
               </li>
             ))}
+            <div className="lg:hidden ">
+              <Link to="/LoginForm">
+                <button className="px-4 py-2 text-white font-bold rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-blue-300">
+                  Login
+                </button>
+              </Link>
+              <Link to="/RegisterForm">
+                <button className="px-4 py-2 bg-[#45FFCA] hover:text-white  font-bold text-lg rounded-md hover:bg-[#FF004D] focus:outline-none focus:ring focus:ring-green-300">
+                  Register
+                </button>
+              </Link>
+            </div>
           </ul>
 
           <div
