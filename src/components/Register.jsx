@@ -32,13 +32,8 @@ function RegisterForm() {
   };
 
   return (
-    <div className="bg-gray-100 h-screen flex items-center justify-center relative">
-      <img
-        src={RegisterImg}
-        alt="Trolley with Hat"
-        className="object-contain "
-      />
-      <div className="bg-[#f8f5ed] shadow-md rounded-xl px-8 pt-6 pb-8 mb-4 w-1/3 absolute right-32">
+    <div className="bg-gray-100  flex items-center justify-center  pt-10">
+      <div className="bg-[#f8f5ed] shadow-md rounded-xl px-8 pt-6 pb-8 mb-4 w-1/3 ">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">

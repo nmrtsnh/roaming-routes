@@ -24,7 +24,7 @@ function LoginForm() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 relative">
       <div
-        className="fixed inset-0 bg-cover bg-center"
+        className="fixed inset-0 bg-cover bg-center mt-24"
         style={{
           backgroundImage: `url(${LoginImage})`,
           opacity: 0.4,

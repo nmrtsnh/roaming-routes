@@ -57,8 +57,8 @@ const DestinationCard = () => {
   };
   return (
     <div>
-      <div className="flex">
-        <div className="p-10 bg-[#2B2A4C] shadow-lg w-fill">
+      <div className="md:flex  ">
+        <div className="p-10 bg-[#2B2A4C] shadow-lg w-fill  hidden md:block  ">
           <Budget handleBudgetChange={handleBudgetChange} />
           <TripCategory />
           <Favorites />
@@ -142,7 +142,7 @@ const DestinationCard = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-10 ml-10 mr-10 mt-10 w-fit">
+          <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 ml-10 mr-10 mt-10 w-fit">
             {DestinationData.filter((destination) => {
               if (
                 selectCategory !== "All" &&
