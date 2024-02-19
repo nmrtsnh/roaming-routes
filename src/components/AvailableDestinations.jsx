@@ -38,17 +38,15 @@ let image = {
 };
 
 const AvailableDestinations = () => {
-  const [searchQuery, setSearchQuery] = useState(""); // State to hold the search query
+  const [searchQuery, setSearchQuery] = useState("");
 
-  // Function to update the search query
-  const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value);
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
   };
 
-  // Function to filter destinations based on the search query
   const filteredDestinations = DestinationData.filter((destination) => {
     const normalizedSearchQuery = searchQuery.toLowerCase();
-    // Check if the city or country includes the search query
+
     return (
       destination.city.toLowerCase().includes(normalizedSearchQuery) ||
       (destination.country &&

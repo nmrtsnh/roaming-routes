@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import LoginImage from "../assets/LoginImage.jpg";
 
 function LoginForm() {
-  // State to store user credentials
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
   });
 
-  // Handler for input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCredentials((prevState) => ({
@@ -17,10 +15,9 @@ function LoginForm() {
     }));
   };
 
-  // Handler for form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can add your authentication logic here
+
     console.log("Submitted:", credentials);
   };
 

@@ -16,7 +16,7 @@ const Search = () => {
     const filteredDestinations = DestinationData.filter((destination) =>
       destination.city.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    // Pass filtered data as state to AvailableDestinations route
+
     navigate("/AvailableDestinations", { state: { filteredDestinations } });
   };
 

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import Santorini from "../assets/Santorini.jpg";
 import Paris from "../assets/Paris.jpg";
 import Maui from "../assets/Maui.jpg";
@@ -107,7 +108,7 @@ const DestinationCard = ({ destination, index }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, (index + 1) * 800); // Adjust the delay time as needed (here it's 500 milliseconds)
+    }, (index + 1) * 600);
 
     return () => clearTimeout(timer);
   }, [index]);

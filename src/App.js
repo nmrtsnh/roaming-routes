@@ -12,6 +12,7 @@ import AvailableDestinations from "./components/AvailableDestinations";
 import RegisterForm from "./components/Register";
 import LoginForm from "./components/Login";
 import AboutRoamingRoutes from "./components/About";
+import Contact from "./components/Contact.jsx";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           />
           <Route path="/RegisterForm" element={<RegisterForm />} />
           <Route path="/LoginForm" element={<LoginForm />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
       </div>
     </Router>

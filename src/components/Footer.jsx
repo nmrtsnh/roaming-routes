@@ -37,22 +37,44 @@ const about = {
 };
 
 const links = [
-  { title: "Home", href: "/" },
-  { title: "About", href: "/about" },
-  // ... add other links
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "About",
+    href: "/about",
+  },
 ];
 
 const services = [
-  { title: "Travel Agency", href: "/services/travel-agency" },
-  { title: "Tour", href: "/services/tour" },
-  // ... add other services
+  {
+    title: "Travel Agency",
+    href: "/services/travel-agency",
+  },
+  {
+    title: "Tour",
+    href: "/services/tour",
+  },
 ];
 
 const photos = [
-  { src: FooterImg1, alt: "Description" },
-  { src: FooterImg2, alt: "Description" },
-  { src: FooterImg3, alt: "Description" },
-  { src: FooterImg4, alt: "Description" },
+  {
+    src: FooterImg1,
+    alt: "Description",
+  },
+  {
+    src: FooterImg2,
+    alt: "Description",
+  },
+  {
+    src: FooterImg3,
+    alt: "Description",
+  },
+  {
+    src: FooterImg4,
+    alt: "Description",
+  },
 ];
 
 const FooterSection = ({ title, children }) => (
@@ -66,7 +88,6 @@ const Footer = () => {
   return (
     <footer className="bg-[#637A9F] text-gray-400 py-8 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-        {/* About Section */}
         <FooterSection title="About us">
           <p>{about.description}</p>
           <div className="flex space-x-4 mt-4">
@@ -86,7 +107,6 @@ const Footer = () => {
           </div>
         </FooterSection>
 
-        {/* Links Section */}
         <FooterSection title="Links">
           <ul>
             {links.map((link) => (
@@ -99,7 +119,6 @@ const Footer = () => {
           </ul>
         </FooterSection>
 
-        {/* Services Section */}
         <FooterSection title="Services">
           <ul>
             {services.map((service) => (
@@ -112,7 +131,6 @@ const Footer = () => {
           </ul>
         </FooterSection>
 
-        {/* Photo Showcase Section */}
         <FooterSection title="Photo Showcase">
           <div className="grid grid-cols-4 gap-2">
             {photos.map((photo) => (

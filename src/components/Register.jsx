@@ -20,9 +20,9 @@ function RegisterForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your registration logic here
+
     console.log(formData);
-    // Reset form fields
+
     setFormData({
       username: "",
       email: "",

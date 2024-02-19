@@ -19,7 +19,6 @@ const Newsletter = () => {
     }
 
     window.addEventListener("scroll", handleScroll);
-    // Clean up the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

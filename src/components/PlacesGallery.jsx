@@ -6,7 +6,6 @@ import India from "../assets/India.jpg";
 import Vietnam from "../assets/Vietnam.jpg";
 
 function PlacesGallery() {
-  // Define an array of place details
   const places = [
     { src: Australia, name: "Australia" },
     { src: Croatia, name: "Croatia" },
@@ -25,7 +24,6 @@ function PlacesGallery() {
         "Discover the world's treasures with us!"
       </h1>
       <div className="grid grid-cols-3 gap-10 mt-10 mx-20 ">
-        {/* Map over the places array to generate place cards */}
         {places.map((place, index) => (
           <div key={index} className="place-card box-1">
             <img

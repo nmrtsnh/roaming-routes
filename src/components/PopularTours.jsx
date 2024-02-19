@@ -74,8 +74,6 @@ const Tours = [
     duration: "3 hours",
     rating: 4.9,
   },
-
-  // Add more popular tours here...
 ];
 
 function PopularTours() {

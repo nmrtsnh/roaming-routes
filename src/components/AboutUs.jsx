@@ -54,7 +54,7 @@ const AboutUs = () => {
           </div>
           <div className="flex items-center justify-center">
             <Link to="/About">
-              <button className="text-lg bg-[#45FFCA] hover:bg-[#FF004D] text-black hover:text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline">
+              <button className="text-lg bg-[#45FFCA] hover:bg-[#FF004D]  hover:text-white font-bold py-4 px-6 rounded focus:outline-none focus:shadow-outline">
                 Know More About Us
               </button>
             </Link>
