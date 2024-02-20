@@ -32,8 +32,15 @@ function RegisterForm() {
   };
 
   return (
-    <div className="bg-gray-100  flex items-center justify-center  pt-10">
-      <div className="bg-[#f8f5ed] shadow-md rounded-xl px-8 pt-6 pb-8 mb-4 w-1/3 ">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 relative">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${RegisterImg})`,
+          opacity: 0.4,
+        }}
+      ></div>
+      <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-lg z-50 ">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">

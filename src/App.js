@@ -24,7 +24,6 @@ function App() {
           <Route path="/Home" element={<Home />}></Route>
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/About" element={<AboutRoamingRoutes />} />
-
           <Route path="/DestinationList" element={<Destinations />} />
           <Route path="/PlacesGallery" element={<Package />} />
           <Route path="/destination-card" element={<DestinationCard />} />

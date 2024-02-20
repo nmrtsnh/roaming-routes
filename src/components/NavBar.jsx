@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -109,9 +108,9 @@ const NavBar = () => {
             } cursor-pointer lg:hidden`}
             onClick={() => setIsActive(!isActive)}
           >
-            <span className="bar block w-10 h-1 rounded-md mx-auto my-2 transition-all duration-300 ease-in-out bg-amber-800 "></span>
-            <span className="bar block w-10 h-1 rounded-md mx-auto my-2 transition-all duration-300 ease-in-out bg-amber-800 "></span>
-            <span className="bar block w-10 h-1 rounded-md mx-auto my-2 transition-all duration-300 ease-in-out bg-amber-800 "></span>
+            <span className="bar block w-10 h-1 rounded-md mx-auto my-2 transition-all duration-300 ease-in-out bg-white "></span>
+            <span className="bar block w-10 h-1 rounded-md mx-auto my-2 transition-all duration-300 ease-in-out bg-white "></span>
+            <span className="bar block w-10 h-1 rounded-md mx-auto my-2 transition-all duration-300 ease-in-out bg-white "></span>
           </div>
         </nav>
       </header>
